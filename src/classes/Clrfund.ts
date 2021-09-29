@@ -1,4 +1,4 @@
-import { Contract, JsonRpcSigner, Wallet } from '../ethers'
+// import { Contract, JsonRpcSigner, Wallet } from '../ethers'
 
 // FundingRound.sol ABI
 // const { abi } = require('@umbra/contracts/artifacts/contracts/Umbra.sol/Umbra.json');
