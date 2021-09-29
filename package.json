@@ -32,6 +32,17 @@
     "ts-jest": "^27.0.5",
     "typescript": "^4.4.3"
   },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "*.ts": [
+      "prettier --parser=typescript --write"
+    ]
+  },
   "files": [
     "dist",
     "package.json",
