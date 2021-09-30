@@ -22,7 +22,9 @@
     "clean": "rm -rf dist build"
   },
   "dependencies": {
-    "ethers": "^5.4.7"
+    "ethers": "^5.4.7",
+    "maci-crypto": "^0.9.1",
+    "maci-domainobjs": "^0.9.1"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",

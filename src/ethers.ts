@@ -26,7 +26,7 @@ export {
 } from '@ethersproject/providers'
 export { sha256 } from '@ethersproject/sha2'
 export { toUtf8Bytes } from '@ethersproject/strings'
-export { computeAddress, serialize } from '@ethersproject/transactions'
+export { computeAddress, serialize, Transaction } from '@ethersproject/transactions'
 export { Wallet } from '@ethersproject/wallet'
 export { Signer } from '@ethersproject/abstract-signer'
 export { Provider } from '@ethersproject/abstract-provider'
