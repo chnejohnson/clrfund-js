@@ -1,8 +1,11 @@
-import { Contract, Signer, BigNumber, BigNumberish, Transaction } from '../ethers'
-import { Keypair, Message, PubKey } from '../maci'
 import { ERC20, FundingRound, MACI } from '../typechain'
 import { FundingRound as FundingRoundABI, ERC20 as ERC20ABI, MACI as MACIABI } from '../abi'
 import { getEventArg, createMessage } from '../utils'
+import { BigNumber, BigNumberish } from '@ethersproject/bignumber'
+import { Contract } from '@ethersproject/contracts'
+import { Signer } from '@ethersproject/abstract-signer'
+import { Transaction } from '@ethersproject/transactions'
+import { Keypair, PubKey, Message, Command } from 'maci-domainobjs'
 
 export class Round {
   readonly fundingRoundAddress: string

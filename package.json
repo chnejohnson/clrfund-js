@@ -4,16 +4,16 @@
   "description": "A JavaScript SDK for the clr.fund protocol.",
   "author": "Johnson Chen <chnejohnson@gmail.com>",
   "license": "MIT",
-  "main": "dist/cjs/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/clrfund-js.js",
+  "module": "dist/clrfund-js.mjs",
+  "typings": "dist/clrfund-js.d.ts",
   "repository": "https://github.com/chnejohnson/clrfund-js",
   "homepage": "https://github.com/chnejohnson/clrfund-js#readme",
   "bugs": {
     "url": "https://github.com/chnejohnson/clrfund-js/issues"
   },
   "scripts": {
-    "build": "yarn clean && yarn run build:esm && yarn run esbuild:node",
+    "build": "rollup -c",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "esbuild:browser": "esbuild src/index.ts --bundle --sourcemap=external --outfile=dist/index.js",
@@ -29,11 +29,17 @@
     "maci-domainobjs": "^0.9.1"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
     "@types/jest": "^27.0.2",
     "esbuild": "^0.13.3",
     "jest": "^27.2.3",
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
+    "rollup": "^2.58.0",
+    "rollup-plugin-dts": "^4.0.0",
+    "rollup-plugin-esbuild": "^4.5.0",
     "ts-jest": "^27.0.5",
     "typescript": "^4.4.3"
   },

@@ -1,5 +1,6 @@
-import { BigNumber } from '../ethers'
-import { Keypair, PubKey, Command, Message, genRandomSalt, IncrementalQuinTree } from '../maci'
+import { BigNumber } from '@ethersproject/bignumber'
+import { Keypair, PubKey, Message, Command } from 'maci-domainobjs'
+import { genRandomSalt, IncrementalQuinTree } from 'maci-crypto'
 
 function bnSqrt(a: BigNumber): BigNumber {
   // Take square root from a big number

@@ -1,4 +1,5 @@
-import { Contract, TransactionReceipt } from '../ethers'
+import { Contract } from '@ethersproject/contracts'
+import { TransactionReceipt } from '@ethersproject/providers'
 
 export function getEventArg(
   transactionReceipt: TransactionReceipt,
