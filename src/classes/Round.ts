@@ -19,14 +19,14 @@ export class Round {
 
   async approveToken(amount: BigNumberish) {
     const tokenAddress = await this.round.nativeToken()
-    const token = new Contract(tokenAddress, ERC20ABI) as ERC20
+    const token = new Contract(tokenAddress, ERC20ABI, this.signer) as ERC20
     // @todo add waitForTransaction
     const allowance = await token.allowance(await this.signer.getAddress(), this.fundingRoundAddress)
     if (allowance.lt(amount)) {
       return await token.approve(this.fundingRoundAddress, amount)
-    } else {
-      throw new Error("Error: signer's allowance is not enough")
     }
+    // alrealy has enough allowance
+    return
   }
 
   async contribute(amount: BigNumberish, onTransaction?: (tx: Transaction) => void) {
