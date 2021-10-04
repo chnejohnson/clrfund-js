@@ -6,7 +6,7 @@
 
 export { defaultAbiCoder } from '@ethersproject/abi'
 export { getAddress } from '@ethersproject/address'
-export { BigNumberish, BigNumber } from '@ethersproject/bignumber'
+export { BigNumberish, BigNumber, FixedNumber } from '@ethersproject/bignumber'
 export { arrayify, hexlify, hexZeroPad, isHexString, SignatureLike, splitSignature } from '@ethersproject/bytes'
 export { AddressZero, Zero } from '@ethersproject/constants'
 export { Contract, ContractInterface, ContractTransaction, Event, Overrides } from '@ethersproject/contracts'

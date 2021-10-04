@@ -1,5 +1,7 @@
-# clrfund.js 
+# [WIP] clrfund.js 
 
 A JavaScript SDK for the clr.fund protocol.
 
-[WIP]
+## Reference
+- [clrfund/monorepo](https://github.com/clrfund/monorepo)
+- [ethereum/clrfund](https://github.com/ethereum/clrfund)
