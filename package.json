@@ -7,7 +7,10 @@
   "main": "dist/cjs/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "https://github.com/chnejohnson/clrfund-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chnejohnson/clrfund-js.git"
+  },
   "homepage": "https://github.com/chnejohnson/clrfund-js#readme",
   "bugs": {
     "url": "https://github.com/chnejohnson/clrfund-js/issues"
@@ -20,7 +23,7 @@
     "esbuild:node": "esbuild src/index.ts --platform=node --bundle --sourcemap=external --outfile=dist/cjs/index.js",
     "watch": "tsc --module commonjs --outDir dist/cjs --watch",
     "test": "jest",
-    "prettier": "prettier --write .",
+    "prettier": "prettier --write",
     "clean": "rm -rf dist build"
   },
   "dependencies": {
@@ -35,18 +38,8 @@
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
     "ts-jest": "^27.0.5",
-    "typescript": "^4.4.3"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write"
-    ],
-    "*.ts": [
-      "prettier --parser=typescript --write"
-    ]
+    "typescript": "^4.4.3",
+    "yorkie": "^2.0.0"
   },
   "files": [
     "dist",
@@ -54,6 +47,14 @@
     "README.md",
     "LICENSE"
   ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,json}": [
+      "prettier --write"
+    ]
+  },
   "keywords": [
     "clrfund",
     "clrfund.js",
